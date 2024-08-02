@@ -1,10 +1,10 @@
-// 国内DNS服务器
+// 国内 DNS 服务器
 const domesticNameservers = [
   "https://dns.alidns.com/dns-query", // 阿里
   "https://doh.pub/dns-query", // 腾讯 DNSPod
   "https://doh.360.cn/dns-query" // 360
 ];
-// 国外DNS服务器
+// 国外 DNS 服务器
 const foreignNameservers = [
   "https://dns.twnic.tw/dns-query", //台湾 Quad101
   "https://1.1.1.1/dns-query", // Cloudflare
@@ -15,7 +15,7 @@ const foreignNameservers = [
   "https://doh.opendns.com/dns-query", // OpenDNS
   "https://doh.dns.sb/dns-query" // DNS.SB
 ];
-// DNS配置
+// DNS 配置
 const dnsConfig = {
   "enable": true,
   "listen": ":10053",
@@ -186,7 +186,7 @@ function main(config) {
     throw new Error("配置文件中未找到任何代理");
   }
 
-  // 覆盖原配置中DNS配置
+  // 覆盖原配置中 DNS 配置
   config["dns"] = dnsConfig;
 
   // 覆盖原配置中的代理组
